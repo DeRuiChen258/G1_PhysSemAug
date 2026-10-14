@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "g1-physical-semantic-dataset-1.0.0",
+  "type": "object",
+  "required": ["schema_version", "robot", "source", "arrays", "profiles", "checksums"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "robot": {"type": "object", "required": ["name", "mjcf", "mujoco_version", "model_sha256"]},
+    "source": {"type": "object", "required": ["dataset", "root", "episodes", "frames", "source_files"]},
+    "arrays": {"type": "object", "additionalProperties": {"type": "object", "required": ["dtype", "shape", "units"]}},
+    "profiles": {"type": "array"},
+    "checksums": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  }
+}

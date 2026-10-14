@@ -1,0 +1,515 @@
+{
+  "schema_version": "1.0.0",
+  "dataset": "G1_Sample",
+  "robot": {
+    "name": "Unitree_G1",
+    "mjcf": "mujoco_menagerie/unitree_g1/scene.xml",
+    "mujoco_version": "3.13.0",
+    "model_sha256": "e3f3a82afba68e1fbf6546d0d8ec1c9896d7c5117d7f9e2171f2dccd5740f80b",
+    "coordinate_convention": "world/base/body; quaternion source xyzw converted to MuJoCo wxyz"
+  },
+  "source": {
+    "root": "sample: first 120 frames of G1_WBT (LeRobot v3)",
+    "info": {
+      "note": "demo slice for tests; full metadata lives in the upstream dataset"
+    },
+    "episodes": 1,
+    "frames": 120,
+    "source_files": [],
+    "videos_read": false
+  },
+  "generation": {
+    "seed": 20261013,
+    "config_sha256": "fc32f73d60d2ba2468e62cf1344899215172bbd03e072d5464ea2c347d22f9ac",
+    "command": "python scripts/generate_physical_semantics.py --config configs/g1_physical_semantics.yaml --dataset G1_WBT --max-frames-per-dataset 120",
+    "python": "3.12",
+    "platform": "Linux x86_64",
+    "git_commit": "see repository history",
+    "max_frames_per_dataset": 120,
+    "cpu_gpu_split": "CPU: Parquet/MuJoCo/NPZ; GPU: training only"
+  },
+  "arrays": {
+    "observation_state": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "augmented_state": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "action": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "augmented_action": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "next_observation_state": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "next_action": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "joint_angle": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "joint_velocity": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "joint_limit_fraction": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "qpos": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        36
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "qvel": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        35
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "imu": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        12
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "part_world_pos": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14,
+        3
+      ],
+      "units": "m / m_s / N (see field)"
+    },
+    "part_nocs": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14,
+        3
+      ],
+      "units": "unitless"
+    },
+    "part_parent_offset": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14,
+        3
+      ],
+      "units": "m / m_s / N (see field)"
+    },
+    "joint_axis_torso": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        14,
+        3
+      ],
+      "units": "unit vector"
+    },
+    "contact_points": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        8,
+        3
+      ],
+      "units": "m / m_s / N (see field)"
+    },
+    "contact_normals": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        8,
+        3
+      ],
+      "units": "unit vector"
+    },
+    "contact_impulses": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        8
+      ],
+      "units": "N_s"
+    },
+    "contact_mask": {
+      "dtype": "uint8",
+      "shape": [
+        120,
+        8
+      ],
+      "units": "unitless"
+    },
+    "contact_body_ids": {
+      "dtype": "int32",
+      "shape": [
+        120,
+        8,
+        2
+      ],
+      "units": "see docs/design/data_schema.md"
+    },
+    "support_polygon": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        8,
+        2
+      ],
+      "units": "m / m_s / N (see field)"
+    },
+    "support_count": {
+      "dtype": "int16",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "com": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        3
+      ],
+      "units": "m / m_s / N (see field)"
+    },
+    "com_velocity": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        3
+      ],
+      "units": "m / m_s / N (see field)"
+    },
+    "zmp": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        3
+      ],
+      "units": "m / m_s / N (see field)"
+    },
+    "zmp_valid": {
+      "dtype": "uint8",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "external_force": {
+      "dtype": "float32",
+      "shape": [
+        120,
+        3
+      ],
+      "units": "m / m_s / N (see field)"
+    },
+    "mass_scale": {
+      "dtype": "float32",
+      "shape": [
+        120
+      ],
+      "units": "scale"
+    },
+    "friction_scale": {
+      "dtype": "float32",
+      "shape": [
+        120
+      ],
+      "units": "scale"
+    },
+    "delay_steps": {
+      "dtype": "int64",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "sensor_occlusion": {
+      "dtype": "int64",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "stability": {
+      "dtype": "uint8",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "future_stability": {
+      "dtype": "uint8",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "reward": {
+      "dtype": "float32",
+      "shape": [
+        120
+      ],
+      "units": "rad/rad_s/unitless (see field)"
+    },
+    "termination_reason": {
+      "dtype": "int8",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "validity_flags": {
+      "dtype": "int64",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "dataset_id": {
+      "dtype": "int64",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "episode_index": {
+      "dtype": "int64",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "frame_index": {
+      "dtype": "int64",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "timestamp": {
+      "dtype": "float32",
+      "shape": [
+        120
+      ],
+      "units": "s"
+    },
+    "task_index": {
+      "dtype": "int64",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    },
+    "profile_id": {
+      "dtype": "int64",
+      "shape": [
+        120
+      ],
+      "units": "unitless"
+    }
+  },
+  "semantic_constants": {
+    "arm_joint_names": [
+      "left_shoulder_pitch_joint",
+      "left_shoulder_roll_joint",
+      "left_shoulder_yaw_joint",
+      "left_elbow_joint",
+      "left_wrist_roll_joint",
+      "left_wrist_pitch_joint",
+      "left_wrist_yaw_joint",
+      "right_shoulder_pitch_joint",
+      "right_shoulder_roll_joint",
+      "right_shoulder_yaw_joint",
+      "right_elbow_joint",
+      "right_wrist_roll_joint",
+      "right_wrist_pitch_joint",
+      "right_wrist_yaw_joint"
+    ],
+    "arm_body_names": [
+      "left_shoulder_pitch_link",
+      "left_shoulder_roll_link",
+      "left_shoulder_yaw_link",
+      "left_elbow_link",
+      "left_wrist_roll_link",
+      "left_wrist_pitch_link",
+      "left_wrist_yaw_link",
+      "right_shoulder_pitch_link",
+      "right_shoulder_roll_link",
+      "right_shoulder_yaw_link",
+      "right_elbow_link",
+      "right_wrist_roll_link",
+      "right_wrist_pitch_link",
+      "right_wrist_yaw_link"
+    ],
+    "joint_types": {
+      "0": "free",
+      "1": "ball",
+      "2": "slide",
+      "3": "hinge"
+    },
+    "arm_joint_type": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "arm_joint_limits_rad": [
+      [
+        -3.089200019836426,
+        2.6703999042510986
+      ],
+      [
+        -1.5881999731063843,
+        2.251499891281128
+      ],
+      [
+        -2.618000030517578,
+        2.618000030517578
+      ],
+      [
+        -1.0471999645233154,
+        2.094399929046631
+      ],
+      [
+        -1.9722199440002441,
+        1.9722199440002441
+      ],
+      [
+        -1.6144299507141113,
+        1.6144299507141113
+      ],
+      [
+        -1.6144299507141113,
+        1.6144299507141113
+      ],
+      [
+        -3.089200019836426,
+        2.6703999042510986
+      ],
+      [
+        -2.251499891281128,
+        1.5881999731063843
+      ],
+      [
+        -2.618000030517578,
+        2.618000030517578
+      ],
+      [
+        -1.0471999645233154,
+        2.094399929046631
+      ],
+      [
+        -1.9722199440002441,
+        1.9722199440002441
+      ],
+      [
+        -1.6144299507141113,
+        1.6144299507141113
+      ],
+      [
+        -1.6144299507141113,
+        1.6144299507141113
+      ]
+    ],
+    "nocs_min_m": [
+      -0.3706609015218693,
+      -0.5717913445739423,
+      -0.4630964023848223
+    ],
+    "nocs_max_m": [
+      0.3539563,
+      0.5718013445739423,
+      0.5977800000000001
+    ],
+    "nocs_definition": "part body origins relative to torso mapped to [0,1]^3; ANCSH-inspired hierarchy, not category-level object pose"
+  },
+  "profiles": [
+    {
+      "profile_id": 0,
+      "seed": 20261013,
+      "mass_scale": 0.99535077,
+      "friction_scale": 0.93158304,
+      "delay_steps": 3,
+      "force": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "force_start": -1,
+      "force_duration": 7,
+      "terrain_slope_rad": 0.0,
+      "sensor_occlusion": false,
+      "profile_hash": "dcca81ca68f374f9f8bc9e4609be41dcad19d97f2b29676636b73e45f3298a6d"
+    }
+  ],
+  "checksums": {
+    "samples.npz": "9ae2f81e23ecf9058ec468683aab43ace494bc78d521d1918e23bf0e9e4f0e42"
+  }
+}

@@ -1,0 +1,22 @@
+# Generated artifacts (regenerate locally; see README section 11)
+data/
+experiments/
+
+# Local workflow ledger
+.agent/
+TASK.md
+Prompt/
+参考/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Builds / caches / misc
+build/
+dist/
+.DS_Store
+*.tmp

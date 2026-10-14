@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0.0",
+  "task": "predict next 14D arm action from augmented state + G1 physical semantics",
+  "data_root": "data/physical_semantics",
+  "config": "configs/g1_physical_semantics.yaml",
+  "config_sha256": "12f52f523f932227a01305a20d5d435a128672958a5d6ad0ef7ada8a35ecbc3f",
+  "frames": 959718,
+  "groups": 1186,
+  "folds": 5,
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "torch": "2.14.0+cu130",
+  "cuda": "13.0",
+  "python": "Python 3.12",
+  "platform": "Linux x86_64",
+  "feature_dim": 393,
+  "folds_result": [
+    {
+      "fold": 0,
+      "train_frames": 762836,
+      "test_frames": 196882,
+      "test_groups": 238,
+      "epochs": 4,
+      "loss_history": [
+        0.03868917750218021,
+        0.02568704399193212,
+        0.023977787865454233,
+        0.022355877789153752
+      ],
+      "metrics": {
+        "mse": 0.022073745727539062,
+        "mae": 0.06005096435546875,
+        "r2": 0.8763419389724731
+      },
+      "persistence_baseline": {
+        "mse": 0.062251847237348557,
+        "mae": 0.11006738990545273,
+        "r2": 0.6512625813484192
+      },
+      "train_wall_seconds": 10.231743981000363,
+      "train_samples_per_second": 298223.2555531231,
+      "amp_dtype": "torch.bfloat16",
+      "checkpoint": "experiments/g1_action_cv_bf16_v2/fold_00.pt"
+    },
+    {
+      "fold": 1,
+      "train_frames": 771093,
+      "test_frames": 188625,
+      "test_groups": 237,
+      "epochs": 4,
+      "loss_history": [
+        0.03639815949436817,
+        0.02370448839797734,
+        0.022107799854872805,
+        0.020597969601081966
+      ],
+      "metrics": {
+        "mse": 0.031592559069395065,
+        "mae": 0.06988466531038284,
+        "r2": 0.8303735852241516
+      },
+      "persistence_baseline": {
+        "mse": 0.0728941485285759,
+        "mae": 0.12219841778278351,
+        "r2": 0.6086175441741943
+      },
+      "train_wall_seconds": 8.699477625999862,
+      "train_samples_per_second": 354546.8052911398,
+      "amp_dtype": "torch.bfloat16",
+      "checkpoint": "experiments/g1_action_cv_bf16_v2/fold_01.pt"
+    },
+    {
+      "fold": 2,
+      "train_frames": 767851,
+      "test_frames": 191867,
+      "test_groups": 237,
+      "epochs": 4,
+      "loss_history": [
+        0.039424546775286784,
+        0.025974065438688708,
+        0.02449857599640344,
+        0.023139371075503998
+      ],
+      "metrics": {
+        "mse": 0.02178146503865719,
+        "mae": 0.05906523019075394,
+        "r2": 0.8760342597961426
+      },
+      "persistence_baseline": {
+        "mse": 0.061736833304166794,
+        "mae": 0.10881782323122025,
+        "r2": 0.648634672164917
+      },
+      "train_wall_seconds": 9.945786622000014,
+      "train_samples_per_second": 308814.58820020076,
+      "amp_dtype": "torch.bfloat16",
+      "checkpoint": "experiments/g1_action_cv_bf16_v2/fold_02.pt"
+    },
+    {
+      "fold": 3,
+      "train_frames": 771860,
+      "test_frames": 187858,
+      "test_groups": 237,
+      "epochs": 4,
+      "loss_history": [
+        0.03634473029219543,
+        0.023272594893916608,
+        0.021369648475627653,
+        0.019803527236501032
+      ],
+      "metrics": {
+        "mse": 0.03770538419485092,
+        "mae": 0.07394625246524811,
+        "r2": 0.7951124906539917
+      },
+      "persistence_baseline": {
+        "mse": 0.07847625762224197,
+        "mae": 0.12946882843971252,
+        "r2": 0.5735673904418945
+      },
+      "train_wall_seconds": 8.300120696999329,
+      "train_samples_per_second": 371975.3136982906,
+      "amp_dtype": "torch.bfloat16",
+      "checkpoint": "experiments/g1_action_cv_bf16_v2/fold_03.pt"
+    },
+    {
+      "fold": 4,
+      "train_frames": 765232,
+      "test_frames": 194486,
+      "test_groups": 237,
+      "epochs": 4,
+      "loss_history": [
+        0.036573660354768035,
+        0.023503429021869436,
+        0.021866683755103075,
+        0.020354283495324227
+      ],
+      "metrics": {
+        "mse": 0.031125202775001526,
+        "mae": 0.06855886429548264,
+        "r2": 0.8288230895996094
+      },
+      "persistence_baseline": {
+        "mse": 0.07133129984140396,
+        "mae": 0.11784526705741882,
+        "r2": 0.6077046990394592
+      },
+      "train_wall_seconds": 10.414624269000342,
+      "train_samples_per_second": 293906.7143411988,
+      "amp_dtype": "torch.bfloat16",
+      "checkpoint": "experiments/g1_action_cv_bf16_v2/fold_04.pt"
+    }
+  ],
+  "aggregate": {
+    "model": {
+      "mse": {
+        "mean": 0.028855671361088752,
+        "std": 0.006837354290915438
+      },
+      "mae": {
+        "mean": 0.06630119532346726,
+        "std": 0.006477071166634474
+      },
+      "r2": {
+        "mean": 0.8413370728492737,
+        "std": 0.0347949179878921
+      }
+    },
+    "persistence_baseline": {
+      "mse": {
+        "mean": 0.06933807730674743,
+        "std": 0.007213156123866515
+      },
+      "mae": {
+        "mean": 0.11767954528331756,
+        "std": 0.008601015883892484
+      },
+      "r2": {
+        "mean": 0.6179573774337769,
+        "std": 0.03245440595870897
+      }
+    }
+  },
+  "reproducibility": {
+    "seed": 20261014,
+    "command": "python scripts/train_crossval.py --data data/physical_semantics --config configs/g1_physical_semantics.yaml --output experiments/g1_action_cv_bf16_v2 --verify-checksums",
+    "deterministic_algorithms": false,
+    "note": "cuDNN/AMP GPU kernel scheduling may produce small last-bit variation; fold groups and config are fixed."
+  },
+  "config_published_sha256": "fc32f73d60d2ba2468e62cf1344899215172bbd03e072d5464ea2c347d22f9ac",
+  "config_note": "运行用配置与仓库发布版仅在 robot.xml / data.root 两个路径字段（及附注）上不同；所有语义键值完全一致，因此其结果对发布版配置同样适用。"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "robot": "Unitree_G1",
+  "datasets": [
+    {
+      "dataset": "G1_Sample",
+      "frames": 120,
+      "episodes": 1,
+      "manifest": "G1_Sample/manifest.json"
+    }
+  ],
+  "source_root": "tests/fixtures (sample slice of G1_WBT)",
+  "config_sha256": "fc32f73d60d2ba2468e62cf1344899215172bbd03e072d5464ea2c347d22f9ac"
+}

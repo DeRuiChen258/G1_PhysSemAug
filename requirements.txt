@@ -1,0 +1,9 @@
+# Data generation / validation (CPU side)
+numpy>=1.26
+mujoco>=3.3
+pyarrow>=15.0
+PyYAML>=6.0
+
+# GPU training: install a CUDA-enabled build matching your driver, e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch>=2.6
